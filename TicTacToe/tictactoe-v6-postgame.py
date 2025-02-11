@@ -5,7 +5,7 @@ while 1:
 	elif len({*b})==2:u='d';break
 	u='o'if u=='x'else'x';m=0
 	while 1:
-		m=input(u,"Pick a move (1-9): ")
+		m=input(u+" Pick a move (1-9): ")
 		if m.isnumeric()and m in b:break
 		else:p("Invalid move!")
 	b[int(m)-1]=u;os.system('cls')
