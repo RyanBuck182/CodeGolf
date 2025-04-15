@@ -41,7 +41,7 @@ def calc_hand_value(hand: list) -> int:
     # Sums the values of the cards
     # Counts aces as 11, but keeps track of them to handle more later
     for card in hand:
-        card_rank = card["rank"]
+        card_rank = card['rank']
         hand_value += VALUES[card_rank]
 
         # Keep track of aces so their values can be handled later
@@ -66,15 +66,15 @@ def show_hands(player_hand, dealer_hand, show_dealer_card = False) -> None:
         print("Dealer's Hand (?):")
         print("  ???")
         for card in dealer_hand[1:]:
-            print(f"  {card["rank"]} of {card["suit"]}")
+            print(f"  {card['rank']} of {card['suit']}")
     else:
         print(f"Dealer's Hand ({calc_hand_value(dealer_hand)}):")
         for card in dealer_hand:
-            print(f"  {card["rank"]} of {card["suit"]}")
+            print(f"  {card['rank']} of {card['suit']}")
 
     print(f"Your Hand ({calc_hand_value(player_hand)}):")
     for card in player_hand:
-        print(f"  {card["rank"]} of {card["suit"]}")
+        print(f"  {card['rank']} of {card['suit']}")
 
 
 def main():
