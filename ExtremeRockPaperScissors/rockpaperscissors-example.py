@@ -24,14 +24,15 @@ def get_user_choice():
     print(" (6) bowling ball")
     print(" (7) river")
     print(" (8) tomato")
-    choice = int(input("Your choice: "))
-    return choices[choice - 1]
+    choice_index = int(input("Your choice: ")) - 1
+    return choice_index
 
 
 def main():
     while True:
-        user_choice = get_user_choice()
-        if user_choice in choices:
+        choice_index = get_user_choice()
+        if 0 <= choice_index < 8:
+            user_choice = choices[choice_index]
             break
         input("Invalid choice! Press enter to try again...")
     print(f"You chose {user_choice}.")
